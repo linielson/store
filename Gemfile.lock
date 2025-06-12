@@ -405,6 +405,17 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
+  actioncable (~> 8.0.2)
+  actionmailbox (~> 8.0.2)
+  actionmailer (~> 8.0.2)
+  actionpack (~> 8.0.2)
+  actiontext (~> 8.0.2)
+  actionview (~> 8.0.2)
+  activejob (~> 8.0.2)
+  activemodel (~> 8.0.2)
+  activerecord (~> 8.0.2)
+  activestorage (~> 8.0.2)
+  activesupport (~> 8.0.2)
   bcrypt (~> 3.1.7)
   bootsnap
   brakeman
@@ -420,6 +431,7 @@ DEPENDENCIES
   puma (>= 5.0)
   rails (~> 8.0.2)
   rails-controller-testing
+  railties (~> 8.0.2)
   rspec-rails
   rubocop-rails-omakase
   solid_cable

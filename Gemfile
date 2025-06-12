@@ -1,7 +1,22 @@
 source "https://rubygems.org"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 8.0.2"
+# Exclude MiniTest from Rails by requiring components individually
+gem "rails", "~> 8.0.2", require: false # Require components individually to exclude minitest
+
+# Rails components without minitest
+gem "actioncable", "~> 8.0.2"
+gem "actionmailbox", "~> 8.0.2"
+gem "actionmailer", "~> 8.0.2"
+gem "actionpack", "~> 8.0.2"
+gem "actiontext", "~> 8.0.2"
+gem "actionview", "~> 8.0.2"
+gem "activejob", "~> 8.0.2"
+gem "activemodel", "~> 8.0.2"
+gem "activerecord", "~> 8.0.2"
+gem "activestorage", "~> 8.0.2"
+gem "activesupport", "~> 8.0.2"
+gem "railties", "~> 8.0.2"
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
 gem "propshaft"
 # Use sqlite3 as the database for Active Record
@@ -49,6 +64,15 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+
+  gem "rspec-rails"
+  gem "factory_bot_rails"
+  gem "capybara"
+  gem "database_cleaner"
+end
+
+group :test do
+  gem "rails-controller-testing" # test controllers with Rails asserts
 end
 
 group :development do
@@ -61,11 +85,3 @@ end
 #   gem "capybara"
 #   gem "selenium-webdriver"
 # end
-
-group :development, :test do
-  gem "rspec-rails"
-  gem "factory_bot_rails"
-  gem "capybara"
-  gem "database_cleaner"
-  gem "rails-controller-testing" # test controllers with Rails asserts
-end
