@@ -8,8 +8,8 @@ RSpec.describe ProductMailer, type: :mailer do
 
     it 'renders the headers' do
       expect(mail.subject).to eq('In stock')
-      expect(mail.to).to eq(['david@example.org'])
-      expect(mail.from).to eq(['from@example.com'])
+      expect(mail.to).to eq([ 'david@example.org' ])
+      expect(mail.from).to eq([ 'from@example.com' ])
     end
 
     it 'renders the body' do

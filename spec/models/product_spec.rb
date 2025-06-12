@@ -16,10 +16,10 @@ RSpec.describe Product, type: :model do
   describe 'stock notifications' do
     it 'sends email notifications when back in stock' do
       product = create(:product, inventory_count: 0)
-      
+
       # Create subscribers for this product
       create_list(:subscriber, 2, product: product)
-      
+
       # Update inventory to trigger notifications
       expect {
         product.update(inventory_count: 99)
